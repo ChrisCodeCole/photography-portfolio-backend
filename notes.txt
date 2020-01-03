@@ -1,0 +1,9 @@
+TODO:
+1. Add image URLs to database
+2. Add ability to add images to website
+    - Need a image hosting site
+    - Need to be able to get image URLs 
+3. Add Vimeo video URls to database
+4. Add ability to add videos to website
+5. Build out user schema properly
+6. Add routes to add images & videos
