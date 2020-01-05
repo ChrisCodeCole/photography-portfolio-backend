@@ -31,30 +31,31 @@ const userSchema = mongoose.Schema({
             required: true
         }
     }],
-    album: [{
-            coverPhotoURL: {
+    albums: [{
+        coverPhotoURL: {
+            type: String,
+            required: true
+        },
+        albumHeadingText: {
+            type: String,
+            required: true,
+            unique: true
+        },
+        albumDescription: {
+            type: String,
+        },
+        images: [{
+            imageURL: {
                 type: String,
                 required: true
             },
-            albumHeadingText: {
-                type: String,
-                required: true
-            },
-            albumDescription: {
-                type: String,
-            },
-            images: [{
-                imageURL: {
-                    type: String,
-                    required: true
-                },
-                dimensions: {
-                    type: String
-                }
-            }],
-            //TODO: possibly add get and set directly to schema?
-            //get: (val) => return val
-            //set: 
+            dimensions: {
+                type: String
+            }
+        }],
+        //TODO: possibly add get and set directly to schema?
+        //get: (val) => return val
+        //set: 
     }]
 }, {
     timestamps: true
